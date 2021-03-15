@@ -11,7 +11,7 @@ source:
   sha256: 09dbc03a9edf581011e7f09f4dd6f5de068658b444ffcd5b93425b89b6c8f541
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -27,7 +27,7 @@ requirements:
     - protobuf
     - onnx >=1.2.1
     - scikit-learn >=0.19
-    - onnxconverter-common >=1.6.1,<1.8
+    - onnxconverter-common >=1.6.1,<1.9
 
 test:
   imports:
