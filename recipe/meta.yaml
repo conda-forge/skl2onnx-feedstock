@@ -27,7 +27,7 @@ requirements:
     - protobuf
     - onnx >=1.2.1
     - scikit-learn >=0.19
-    - onnxconverter-common >=1.6.1,<1.9
+    - onnxconverter-common >=1.6.1
 
 test:
   imports:
