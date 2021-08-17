@@ -1,5 +1,5 @@
 {% set name = "skl2onnx" %}
-{% set version = "1.9.1" %}
+{% set version = "1.9.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/onnx/sklearn-onnx/archive/{{ version }}.tar.gz
-  sha256: 7f5276a7a75cd0c33f391f4e7eaefc11826349b05cfe4b625e591faee4e55d45
+  sha256: d029d764674fffa32c9856019238ca2448e609dd40532f1c641c312fd5143950
 
 build:
   number: 0
