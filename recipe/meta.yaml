@@ -1,5 +1,5 @@
 {% set name = "skl2onnx" %}
-{% set version = "1.9.1" %}
+{% set version = "1.9.2" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/onnx/sklearn-onnx/archive/{{ version }}.tar.gz
-  sha256: 7f5276a7a75cd0c33f391f4e7eaefc11826349b05cfe4b625e591faee4e55d45
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/skl2onnx-{{ version }}.tar.gz
+  sha256: c67521bf1baf6fbed5c4b6388f88a0304edccce4647fc8c86c0d85770b03d336
 
 build:
   number: 0
@@ -22,15 +22,16 @@ requirements:
   run:
     - python >=3.6
     - numpy >=1.15
-    - scipy >=1.0
-    - protobuf
     - onnx >=1.2.1
-    - scikit-learn >=0.19
     - onnxconverter-common >=1.6.1
+    - protobuf
+    - scikit-learn >=0.19
+    - scipy >=1.0
 
 test:
   imports:
     - skl2onnx
+    - skl2onnx.algebra
   commands:
     - pip check
   requires:
@@ -38,10 +39,11 @@ test:
 
 about:
   home: https://github.com/onnx/sklearn-onnx
-  summary: Convert scikit-learn models and pipelines to ONNX
-  license: MIT
+  summary: Convert scikit-learn models to ONNX
+  license: Apache-2.0
   license_file: LICENSE
 
 extra:
   recipe-maintainers:
     - xhochy
+    - janjagusch
