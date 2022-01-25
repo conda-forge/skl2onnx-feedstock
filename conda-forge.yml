@@ -1,3 +1,4 @@
 conda_forge_output_validation: true
 bot:
   run_deps_from_wheel: true
+  automerge: true
