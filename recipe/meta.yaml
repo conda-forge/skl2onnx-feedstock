@@ -25,7 +25,7 @@ requirements:
     - onnx >=1.2.1
     - onnxconverter-common >=1.7.0
     - protobuf 
-    - scikit-learn >=0.19
+    - scikit-learn >=0.19,<=1.1.1
     - scipy >=1.0
     - packaging
 
