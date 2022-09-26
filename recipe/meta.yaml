@@ -1,5 +1,5 @@
 {% set name = "skl2onnx" %}
-{% set version = "1.12" %}
+{% set version = "1.13" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/skl2onnx-{{ version }}.tar.gz
-  sha256: 15f4a07b97f7c5bf11b7353b8cb75c9f8c161485deb198cb49cc61a9d507c29c
+  sha256: 5f352f6b9b855ffac6305a707f02c7d436f4368938ee9049092a95a3565c273d
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - onnx >=1.2.1
     - onnxconverter-common >=1.7.0
     - protobuf 
-    - scikit-learn >=0.19,<=1.1.1
+    - scikit-learn <=1.1.1
     - scipy >=1.0
     - packaging
 
