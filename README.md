@@ -1,11 +1,11 @@
-About skl2onnx
-==============
+About skl2onnx-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/skl2onnx-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/onnx/sklearn-onnx
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/skl2onnx-feedstock/blob/main/LICENSE.txt)
 
 Summary: Convert scikit-learn models to ONNX
 
