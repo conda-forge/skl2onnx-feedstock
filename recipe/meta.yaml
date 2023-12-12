@@ -1,5 +1,5 @@
 {% set name = "skl2onnx" %}
-{% set version = "1.15.0" %}
+{% set version = "1.16.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/skl2onnx-{{ version }}.tar.gz
-  sha256: 05b2c2643ad0357ec1ea684d138438a2df657df828e57d07cb78c2e76be20e37
+  sha256: 3370b3d4065ce2dc5933878c3273f4aea41f945cc6514543b13ad2d57f369ce5
 
 build:
   number: 0
