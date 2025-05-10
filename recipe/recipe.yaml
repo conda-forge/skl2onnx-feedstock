@@ -1,0 +1,59 @@
+schema_version: 1
+
+context:
+  name: skl2onnx
+  version: 1.18.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/skl2onnx-${{ version }}.tar.gz
+  sha256: 39ea4ae30c5c182355a1824467013158214444e0ce0b18f33338bd827d4fb00f
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - numpy >=1.15
+    - onnx >=1.2.1
+    - onnxconverter-common >=1.7.0
+    - protobuf
+    - scikit-learn >=1.1
+    - scipy >=1.0
+    - packaging
+
+tests:
+  - python:
+      imports:
+        - skl2onnx
+        - skl2onnx.algebra
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Convert scikit-learn models to ONNX
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/onnx/sklearn-onnx
+
+extra:
+  recipe-maintainers:
+    - xhochy
+    - janjagusch
+    - cbourjau
+    - jtilly
