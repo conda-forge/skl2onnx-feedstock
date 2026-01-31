@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: skl2onnx
-  version: "1.19.1"
+  version: "1.20.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/skl2onnx-${{ version }}.tar.gz
-  sha256: 0c105f2a3b87a624dd218d1fb98fdd19cf1bf6217190d25ce7e15484127d0e5d
+  sha256: c74ea827d92ba186fe659695e8fc989cd97bfc320edce3d32b9936a5878da10a
 
 build:
   number: 0
